@@ -7,6 +7,10 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'
 
 import argparse
 
+# pavel added to remove the image resolution limit
+from PIL import Image
+Image.MAX_IMAGE_PIXELS = None
+
 from src.misc import dist_utils
 from src.core import YAMLConfig, yaml_utils
 from src.solver import TASKS
